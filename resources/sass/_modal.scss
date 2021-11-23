@@ -1,0 +1,51 @@
+.homeModal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    opacity: 0;
+    z-index: -1;
+    animation-name: fadein;
+    animation-duration: 0.5s;
+    &.is-open {
+      display: flex;
+      background-color: rgba(0, 0, 0, 0.3);
+      opacity: 1;
+      z-index: 100;
+    }
+    &__contents {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        background-color: rgb(53, 52, 52);
+        border-radius: 2px;
+        width: 800px;
+        height: 500px;
+        color: #ffffff;
+        &__field {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+    }
+}
+
+.is-open {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    z-index: 9990;
+}
+
+//モーダルウインドウ表示中は、ハンバーガーメニューを非表示
+.is-hidden{
+    display: none;
+}

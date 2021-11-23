@@ -1,0 +1,73 @@
+//ヘッダーのレイヤーが一番上（vue-selectが上回るのを防ぐため）
+.z-index-apex {
+    z-index: 9999;
+}
+
+//セレクトボックス
+.vs__dropdown-toggle {
+    border: none !important;
+}
+.vs__actions {
+    padding: 4px 15px 0 3px !important;
+}
+.vs__clear {
+    fill: rgba(60,60,60,.5);
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 11px;
+}
+
+//ページネーション
+.pagination {
+    margin: 0 0 0 0 !important;
+    li {
+        a {
+            outline: none !important;
+        }
+    }
+}
+.active {
+    a {
+        background-color: #53B6C9 !important;
+        border-color:  #53B6C9 !important;
+    }
+}
+
+//ボタンの反応領域を広げる
+.stretched-link::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: auto;
+    content: "";
+}
+
+//中央配置
+.inset-center {
+    @include breakPointS($tab) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.inset-center-fixed {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+//vue-datepicker
+.customPicker {
+    input {
+        width: 100%;
+        outline: none;
+    }
+}

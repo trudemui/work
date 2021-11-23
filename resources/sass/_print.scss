@@ -1,0 +1,75 @@
+@media print {
+    // @page { 
+    //     size: A4; /* portrait(縦) || landscape(横) */
+    // }
+    .c-homePrint__field__content {
+        page-break-after: always;
+    }
+    .c-homePrint2__field__content {
+        page-break-after: always;
+    }
+}
+
+.c-homePrint {
+    &__field {
+        &__content {
+            height: 720px;
+            &__top {
+                margin-bottom: 15px;
+                p {
+                    font-size: 13px;
+                }
+            }
+            &__table {
+                overflow-x: visible !important;
+                thead {
+                    tr {
+                        th {
+                            font-size: 13px;
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        td {
+                            height: 40px;
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.c-homePrint2 {
+    &__field {
+        &__content {
+            height: 1030px;
+            &__top {
+                margin-bottom: 15px;
+                p {
+                    font-size: 13px;
+                }
+            }
+            &__table {
+                overflow-x: visible !important;
+                thead {
+                    tr {
+                        th {
+                            font-size: 13px;
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        td {
+                            // height: 15px;
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

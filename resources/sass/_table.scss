@@ -1,0 +1,28 @@
+.table-scroll-custom {
+    @include breakPointS($phone) {
+        display: block;
+        overflow-x: scroll;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+    }
+}
+.table-width {
+    @include breakPointS($phone) {
+        width: 100%;
+    }
+}
+.mleft-0 {
+    margin-top: 0;
+    margin-left: 0;
+}
+.mleft-02 {
+    margin-left: 0;
+}
+.scroll-table {
+  display: table-cell;
+  overflow-x: scroll;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}

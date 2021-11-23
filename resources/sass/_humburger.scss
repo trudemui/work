@@ -1,0 +1,114 @@
+  .hamburger {
+    display: block;
+    position: fixed;
+    z-index: 3;
+    right: 13px;
+    top: 2px;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    text-align: center;
+  
+    span {
+      display: block;
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      left: 6px;
+      background: #0C7286;
+  
+      // -webkit-transition: 0.3s ease-in-out;
+      // -moz-transition   : 0.3s ease-in-out;
+      // transition        : 0.3s ease-in-out;
+  
+      &:nth-child(1) {
+        top: 10px;
+      }
+  
+      &:nth-child(2) {
+        top: 20px;
+      }
+  
+      &:nth-child(3) {
+        top: 30px;
+      }
+    }
+  
+    &.active span {
+      &:nth-child(1) {
+        top: 20px;
+        left: 6px;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+  
+      &:nth-child(2), &:nth-child(3) {
+        top: 20px;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+  }
+  
+  /* ナビ開いてる時のボタン */
+  
+  //   .globalMenuSp {
+  //     position: fixed;
+  //     z-index : 2;
+  //     top  : 0;
+  //     left : 0;
+  //     color: #000;
+  //     background: #fff;
+  //     text-align: center;
+  //     transform: translateX(100%);
+  //     transition: all 0.6s;
+  //     width: 100%;
+  //   }
+  
+  //   .globalMenuSp ul {
+  //     background: #ccc;
+  //     margin: 0 auto;
+  //     padding: 0;
+  //     width: 100%;
+  //   }
+  
+  //   .globalMenuSp ul li {
+  //     list-style-type: none;
+  //     padding: 0;
+  //     width: 100%;
+  //     border-bottom: 1px solid #fff;
+  //   }
+  //   .globalMenuSp ul li:last-child {
+  //     padding-bottom: 0;
+  //     border-bottom: none;
+  //   }
+  //   .globalMenuSp ul li:hover{
+  //     background :#ddd;
+  //   }
+  
+  //   .globalMenuSp ul li a {
+  //     display: block;
+  //     color: #000;
+  //     padding: 1em 0;
+  //     text-decoration :none;
+  //   }
+  
+  /* このクラスを、jQueryで付与・削除する */
+  
+  .globalMenuSp.active {
+    display: block;
+    z-index: 100;
+    transform: translateX(0%);
+  }
+
+  .is-disabled {
+    @include breakPointS($monitor) {
+      display: flex;
+      background-color: rgba(0, 0, 0, 0.3);
+      opacity: 1;
+      z-index: 100;
+      pointer-events: none;
+    }
+  }

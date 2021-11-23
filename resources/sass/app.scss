@@ -1,0 +1,23 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Custom CSS
+@import "./mixin.scss";
+@import "./customParts.scss";
+@import "./checkbox.scss";
+@import "./humburger.scss";
+@import "./modal.scss";
+@import "./print.scss";
+@import "./loading.scss";
+@import "./table.scss";
+
+// Tailwind CSS
+@import "~tailwindcss/base.css";
+@import "~tailwindcss/components.css";
+@import "~tailwindcss/utilities.css";
+
+//Vue-Select
+@import "~vue-select/src/scss/vue-select.scss";
+
+// Bootstrap CSS
+.bootstrap { @import "./bootstrap.scss"; }

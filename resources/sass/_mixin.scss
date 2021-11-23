@@ -1,0 +1,31 @@
+$mini: 450px;
+$phone: 576px;
+$tab: 768px;
+$pc: 1025px;
+$monitor: 1280px;
+
+// 〜以上
+@mixin breakPoint($breakPoint) {
+    @media (min-width: ($breakPoint)) {
+      @content;
+    }
+}
+
+// 〜以下
+@mixin breakPointS($smart) {
+    @media (max-width: ($smart)) {
+      @content;
+    }
+}
+
+.phoneNone {
+  @include breakPointS($phone) {
+      display: none;
+  }
+}
+
+.pcNone {
+  @include breakPoint($phone) {
+      display: none;
+  }
+}
